@@ -5,8 +5,8 @@ console.log("Number of categories: ", listCategories.length);
 console.log("");
 
 listCategories.forEach(function (listCategories) {
-    // listCategories.lastElementChild - выберет последний дочерний узел-элемент внутри listCategories.
-    // listCategories.firstElementChild.textContent возвращает текстовый контент внутри элемента.
+// listCategories.lastElementChild - выберет последний дочерний узел-элемент внутри listCategories.
+// listCategories.firstElementChild.textContent возвращает текстовый контент внутри элемента.
   const categoryTitle = listCategories.firstElementChild.textContent;
   console.log("Category:", categoryTitle);
 
