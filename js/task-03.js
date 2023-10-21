@@ -25,7 +25,7 @@ images.forEach((images) => {
 
   lists.insertAdjacentHTML(
     "beforeend",
-    `<li class= "list"><img  src = "${images.url}" alt = "${images.alt}"  width = "300" height = "220" /></li>`
+    `<li class= "list"><img  src = "${images.url}" alt = "${images.alt}"  width = "400" height = "220" /></li>`
   );
 });
 
@@ -36,5 +36,5 @@ lists.style.flexWrap = "wrap";
 lists.style.justifyContent = "space-around";
 lists.style.justifyContent = "space-around";
 lists.style.gap = "10px";
-lists.style.rowGap = "77px";
 lists.style.paddingLeft = "0px";
+lists.style.margin = "20px";
