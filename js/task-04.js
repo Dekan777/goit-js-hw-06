@@ -10,6 +10,7 @@ decBtn.addEventListener("click", () => {
   counterValue -= 1;
   //innerHTML вернули значение в HTML
   valueId.innerHTML = counterValue;
+
 });
 
 incBtn.addEventListener("click", () => {
