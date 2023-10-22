@@ -17,3 +17,5 @@ incBtn.addEventListener("click", () => {
   counterValue += 1;
   valueId.innerHTML = counterValue;
 });
+
+

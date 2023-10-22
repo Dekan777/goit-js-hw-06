@@ -7,5 +7,7 @@ input.addEventListener("input", function (event) {
   if (event.target.value === "") {
     event.target.value = "Anonymous";
   }
+ 
   output.textContent = event.target.value;
 });
+
