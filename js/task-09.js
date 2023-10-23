@@ -5,8 +5,8 @@ function changeColor() {
   const randomColor = getRandomHexColor();
 
   //получение ссылки на первый елемент колекции тега body
-  const elementBody = document.getElementsByTagName("body")[0];
-  
+  const elementBody = document.querySelector("body");
+
   //получение ссыылки елемента span
   const elementSpan = document.querySelector(".color");
 
@@ -20,4 +20,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
