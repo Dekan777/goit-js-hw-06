@@ -13,31 +13,40 @@ const images = [
   },
 ];
 
-const lists = document.querySelector(".gallery");
+// const imageGallery = document.querySelector(".gallery");
 
-// console.log(lists);
+// // console.log(lists);
 
-images.forEach((images) => {
-  // console.log(images);
+// images.forEach((images) => {
+//   // console.log(images);
 
-  const imageList = document.createElement("li");
-  // console.log(imageList);
+//   const imageList = document.createElement("li");
+//   // console.log(imageList);
 
-  lists.insertAdjacentHTML(
-    "beforeend",
-    `<li class= "list"><img  src = "${images.url}" alt = "${images.alt}"  width = "400" height = "220" /></li>`
-  );
-});
-
-
+//   imageGallery.insertAdjacentHTML(
+//     "beforeend",
+//     `<li class= "list"><img  src = "${images.url}" alt = "${images.alt}"  width = "400" height = "220" /></li>`
+//   );
+// });
 
 
-lists.style.listStyleType = "none";
-lists.style.display = "flex";
-lists.style.flexDirection = "row";
-lists.style.flexWrap = "wrap";
-lists.style.justifyContent = "space-around";
-lists.style.justifyContent = "space-around";
-lists.style.gap = "10px";
-lists.style.paddingLeft = "0px";
-lists.style.margin = "20px";
+
+const imageGallery = document.querySelector('.gallery');
+const image = images.reduce(
+  (cont, item) => cont + `<img src = "${item.url}" alt = "${item.alt}"  width = "400" height = "220" />`,
+  ""
+);
+
+imageGallery.innerHTML = image;
+
+
+
+imageGallery.style.display = "flex";
+imageGallery.style.listStyleType = "none";
+imageGallery.style.flexDirection = "row";
+imageGallery.style.flexWrap = "wrap";
+imageGallery.style.justifyContent = "space-around";
+imageGallery.style.justifyContent = "space-around";
+imageGallery.style.gap = "10px";
+imageGallery.style.paddingLeft = "0px";
+imageGallery.style.margin = "20px";
