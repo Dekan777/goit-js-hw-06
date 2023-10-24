@@ -1,42 +1,32 @@
 let width = 30;
 let height = 30;
 
-const controls = document.getElementById("controls");
-const input = controls.querySelector("input");
-const createButton = controls.querySelector("[data-create]");
-const destroyButton = controls.querySelector("[data-destroy]");
-const boxes = document.getElementById("boxes");
+const controls = document.querySelector("controls");
+const input = document.querySelector("input");
+const createButton = document.querySelector("[data-create]");
+const destroyButton = document.querySelector("[data-destroy]");
+const boxes = document.querySelector("#boxes");
 
+createButton.addEventListener("click", createBoxes);
+destroyButton.addEventListener("click", destroyBoxes);
 
-const amount = input.value;
-console.log(amount);
-
-
-
-
-
-
-
-
-
-
-
-  for (let i = 0; i < 10; i++) {
+function createBoxes() {
+  const amount = input.value;
+  for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
-    div.style.width = width + "px";
-    div.style.height = height + "px";
+    div.style.width = parseInt(width) + i * 10 + "px";
+    div.style.height = parseInt(height) + i * 10 + "px";
     div.style.backgroundColor = getRandomHexColor();
     boxes.appendChild(div);
-
-    width += 10;
-    height += 10;
   }
+}
 
+function destroyBoxes() {
+  boxes.innerHTML = "";
+}
 
-
-
-  function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, 0)}`;
-  }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
