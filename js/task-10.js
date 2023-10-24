@@ -8,7 +8,8 @@ const destroyButton = controls.querySelector("[data-destroy]");
 const boxes = document.getElementById("boxes");
 
 
-
+const amount = input.value;
+console.log(amount);
 
 
 

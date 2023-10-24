@@ -29,6 +29,9 @@ images.forEach((images) => {
   );
 });
 
+
+
+
 lists.style.listStyleType = "none";
 lists.style.display = "flex";
 lists.style.flexDirection = "row";
