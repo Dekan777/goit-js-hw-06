@@ -15,13 +15,13 @@ const images = [
 
 // const imageGallery = document.querySelector(".gallery");
 
-// // console.log(lists);
+// console.log(lists);
 
 // images.forEach((images) => {
-//   // console.log(images);
+// console.log(images);
 
 //   const imageList = document.createElement("li");
-//   // console.log(imageList);
+// console.log(imageList);
 
 //   imageGallery.insertAdjacentHTML(
 //     "beforeend",

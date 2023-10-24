@@ -19,7 +19,7 @@ console.log(list);
 //   const ingredientsList = document.createElement("li"); //создаем li для каждого елемента ul ingredients.
 //   ingredientsList.textContent = ingredients;            //присваиваем название из массива.
 //   ingredientsList.classList.add("item");                // добавляем class item.
-// list.append(ingredientsList);                         //добавляем елементы после #ingredients.
+// list.append(ingredientsList);                           //добавляем елементы после #ingredients.
 // });
 // console.log(list);
 
