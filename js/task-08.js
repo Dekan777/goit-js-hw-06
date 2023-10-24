@@ -10,8 +10,14 @@ function handleSubmit(event) {
   const password = registerForm.elements.password.value;
 
   if (email === "" || password === "") {
-    return alert("Fill in all the fields!");
+    registerForm.elements.email.value = "";
+    registerForm.elements.password.value = "";
+    
+    return console.log("Fill in all the fields!");
   }
-  alert(`email: ${this.email.value}, password: ${this.password.value}`);
+  console.log(`email: ${this.email.value} \npassword: ${this.password.value}`);
+  registerForm.elements.email.value = "";
+  registerForm.elements.password.value = "";
 }
 
+//8ме - при сабміті форма повинна чиститись. Також виводити данні з форми треба у вигляді об'єкту у консоль
