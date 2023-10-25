@@ -11,21 +11,27 @@ createButton.addEventListener("click", createBoxes);
 destroyButton.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
-  const amount = input.value;
+ const amount = input.value;
+ const fragment = document.createDocumentFragment(); // фрагмент документа
+
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
     div.style.width = parseInt(width) + i * 10 + "px";
     div.style.height = parseInt(height) + i * 10 + "px";
     div.style.backgroundColor = getRandomHexColor();
-    boxes.appendChild(div);
+    fragment.appendChild(div);// добавляем в фрагмент
   }
+
+  boxes.appendChild(fragment); //добавляем в DOM 
 }
 
 function destroyBoxes() {
   boxes.innerHTML = "";
 }
 
+
 function getRandomHexColor() {
+
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
