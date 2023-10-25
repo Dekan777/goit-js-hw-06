@@ -37,15 +37,14 @@ const image = images.reduce(
   ""
 );
 
-imageGallery.innerHTML = image;
-
+// imageGallery.innerHTML = image;
+imageGallery.insertAdjacentHTML('beforeend', image);
 
 
 imageGallery.style.display = "flex";
 imageGallery.style.listStyleType = "none";
 imageGallery.style.flexDirection = "row";
 imageGallery.style.flexWrap = "wrap";
-imageGallery.style.justifyContent = "space-around";
 imageGallery.style.justifyContent = "space-around";
 imageGallery.style.gap = "10px";
 imageGallery.style.paddingLeft = "0px";
